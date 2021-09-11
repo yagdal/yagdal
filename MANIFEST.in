@@ -1,0 +1,16 @@
+include README.rst
+include MANIFEST.in
+include pyproject.toml
+include LICENSE
+include Makefile
+include pytest.ini
+include yagdal/py.typed
+include yagdal/*.pyd
+include yagdal/*.pyx
+include yagdal/*.pxd
+include yagdal/*.pxi
+include yagdal/*.pyi
+include test/*.py
+exclude yagdal/*.c
+recursive-include docs *
+prune docs/_build
