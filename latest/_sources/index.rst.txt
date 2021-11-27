@@ -5,7 +5,7 @@ Yet another GDAL Python interface to  `GDAL <https://gdal.org/>`_ (translator li
 
 GitHub Repository: https://github.com/yagdal/yagdal
 
-.. note:: Minimum supported GDAL version is 3.3
+.. note:: Minimum supported GDAL version is 3.4
 
 .. note:: Minimum supported Python version is 3.8
 
