@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; yagdal 0.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Change Log" href="history.html" />
+    <link rel="prev" title="yagdal Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #353130" >
+            <a href="index.html" class="icon icon-home"> yagdal
+          </a>
+              <div class="version">
+                0.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-from-source">Installing from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-gdal">Setup GDAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yagdal-build-environment-variables">yagdal Build Environment Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-yagdal">Setup yagdal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-yagdal">Install yagdal</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #353130" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yagdal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
+<section id="installing-from-source">
+<h2>Installing from source<a class="headerlink" href="#installing-from-source" title="Permalink to this headline"></a></h2>
+<section id="setup-gdal">
+<h3>Setup GDAL<a class="headerlink" href="#setup-gdal" title="Permalink to this headline"></a></h3>
+<p>GDAL is required when building from source.</p>
+<p><a class="reference external" href="https://gdal.org/download.html#download" title="(in GDAL)"><span class="xref std std-ref">GDAL Installation Instructions</span></a></p>
+<p>You can also download GDAL from:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://download.osgeo.org/gdal">https://download.osgeo.org/gdal</a></p></li>
+<li><p><a class="reference external" href="https://github.com/OSGeo/GDAL">https://github.com/OSGeo/GDAL</a></p></li>
+</ul>
+<p>Additionally, you can use <a class="reference external" href="https://conda.io/en/latest/">conda</a> with the <a class="reference external" href="https://conda-forge.org/">conda-forge</a> channel:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --prepend channels conda-forge
+conda config --set channel_priority strict
+conda create -n yagdal_env libgdal cython
+conda activate yagdal_env
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“… we recommend always installing your packages inside a
+new environment instead of the base environment from
+anaconda/miniconda. Using envs make it easier to
+debug problems with packages and ensure the stability
+of your root env.”</p>
+<blockquote>
+<div><p>– <a class="reference external" href="https://conda-forge.org/docs/user/tipsandtricks.html">https://conda-forge.org/docs/user/tipsandtricks.html</a></p>
+</div></blockquote>
+</div>
+</div></blockquote>
+</section>
+<section id="yagdal-build-environment-variables">
+<h3>yagdal Build Environment Variables<a class="headerlink" href="#yagdal-build-environment-variables" title="Permalink to this headline"></a></h3>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-GDAL_VERSION">
+<span class="sig-name descname"><span class="pre">GDAL_VERSION</span></span><a class="headerlink" href="#envvar-GDAL_VERSION" title="Permalink to this definition"></a></dt>
+<dd><p>This sets the version of GDAL when building yagdal. This
+enables installing yagdal when the GDAL executables are not
+present but the header files exist.</p>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-GDAL_DIR">
+<span class="sig-name descname"><span class="pre">GDAL_DIR</span></span><a class="headerlink" href="#envvar-GDAL_DIR" title="Permalink to this definition"></a></dt>
+<dd><p>This is the path to the base directory for GDAL.
+Examples of how to set the GDAL_DIR environment variable:</p>
+<p>Windows:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">GDAL_DIR</span><span class="o">=</span>C:<span class="se">\O</span>SGeo4W<span class="se">\</span>
+</pre></div>
+</div>
+<p>Linux:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GDAL_DIR</span><span class="o">=</span>/usr/local
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-GDAL_LIBDIR">
+<span class="sig-name descname"><span class="pre">GDAL_LIBDIR</span></span><a class="headerlink" href="#envvar-GDAL_LIBDIR" title="Permalink to this definition"></a></dt>
+<dd><p>This is the path to the directory containing the GDAL libraries.
+If not set, it searches the <cite>lib</cite> and <cite>lib64</cite> directories inside
+the GDAL directory.</p>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-GDAL_INCDIR">
+<span class="sig-name descname"><span class="pre">GDAL_INCDIR</span></span><a class="headerlink" href="#envvar-GDAL_INCDIR" title="Permalink to this definition"></a></dt>
+<dd><p>This is the path to the GDAL include directory. If not set, it assumes
+it is the <cite>includes</cite> directory inside the GDAL directory.</p>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-YAGDAL_WHEEL">
+<span class="sig-name descname"><span class="pre">YAGDAL_WHEEL</span></span><a class="headerlink" href="#envvar-YAGDAL_WHEEL" title="Permalink to this definition"></a></dt>
+<dd><p>This is a boolean value used when building a wheel.</p>
+</dd></dl>
+
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-YAGDAL_FULL_COVERAGE">
+<span class="sig-name descname"><span class="pre">YAGDAL_FULL_COVERAGE</span></span><a class="headerlink" href="#envvar-YAGDAL_FULL_COVERAGE" title="Permalink to this definition"></a></dt>
+<dd><p>Boolean that sets the compiler directive for cython to include
+the test coverage.</p>
+</dd></dl>
+
+</section>
+<section id="setup-yagdal">
+<h3>Setup yagdal<a class="headerlink" href="#setup-yagdal" title="Permalink to this headline"></a></h3>
+<p>In the setup.py, the order for searching for GDAL is:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The <span class="target" id="index-0"></span><a class="reference internal" href="#envvar-GDAL_DIR"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">GDAL_DIR</span></code></a> environment variable</p></li>
+<li><p>The <cite>gdalinfo</cite> executable in sys.prefix</p></li>
+<li><p>The <cite>gdalinfo</cite> executable on the PATH</p></li>
+</ol>
+</div></blockquote>
+<p>For best results, set the <span class="target" id="index-1"></span><a class="reference internal" href="#envvar-GDAL_DIR"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">GDAL_DIR</span></code></a> environment variable to
+point to location of GDAL installation before running setup.py.</p>
+<section id="install-yagdal">
+<h4>Install yagdal<a class="headerlink" href="#install-yagdal" title="Permalink to this headline"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="http://cython.org/">Cython</a> or pip&gt;=10.0.1 is required for the installation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may need to run pip with administrative privileges (e.g. <cite>sudo pip</cite>) or
+perform a user only installation (e.g. <cite>pip install –user</cite>).</p>
+</div>
+<section id="from-github-with-pip">
+<h5>From GitHub with <cite>pip</cite>:<a class="headerlink" href="#from-github-with-pip" title="Permalink to this headline"></a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install git+https://github.com/yagdal/yagdal.git
+</pre></div>
+</div>
+</section>
+<section id="from-cloned-github-repo-for-development">
+<h5>From cloned GitHub repo for development:<a class="headerlink" href="#from-cloned-github-repo-for-development" title="Permalink to this headline"></a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e .
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="yagdal Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="history.html" class="btn btn-neutral float-right" title="Change Log" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, yagdal contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
