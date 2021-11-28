@@ -4,6 +4,9 @@ Yet another GDAL Python Wrapper
 
 __version__ = "0.0.0"
 
+from yagdal._show_versions import (  # noqa: F401 pylint: disable=unused-import
+    show_versions,
+)
 from yagdal._version import get_gdal_version_info, get_geos_version, get_proj_version
 
 __gdal_version__ = get_gdal_version_info("RELEASE_NAME")
