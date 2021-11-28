@@ -23,10 +23,7 @@ http://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports
 
 
 #### Environment Information
- - yagdal version (`python -c "import yagdal; print(yagdal.__version__)"`)
- - GDAL version (`python -c "import yagdal; print(yagdal.__gdal_version__)"`)
- - Python version (`python -c "import sys; print(sys.version.replace('\n', ' '))"`)
- - Operation System Information (`python -c "import platform; print(platform.platform())"`)
+ - Output from: `python -m yagdal -v`
 
 
 #### Installation method

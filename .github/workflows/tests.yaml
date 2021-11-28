@@ -58,6 +58,7 @@ jobs:
         run: |
           source activate test
           python -V
+          yagdal -v
           conda info
 
       - name: Install pylint
